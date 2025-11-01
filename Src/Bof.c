@@ -9,8 +9,6 @@
  * - Mitigation policy manipulation (BlockDLL, CFG disable)
  * - Draugr framework for stack spoofing and indirect syscalls
  * 
- * @author Security Research Team
- * @date 2024
  */
 
 #include <windows.h>
