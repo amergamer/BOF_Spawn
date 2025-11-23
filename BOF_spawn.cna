@@ -36,9 +36,9 @@ $process_spawn = "\\??\\C:\\Windows\\System32\\rundll32.exe";
 $parent_process = "explorer.exe";
 $working_dir = "C:\\Windows\\System32";
 $cmd_line = "C:\\Windows\\System32\\rundll32.exe";
-$block_dll = true;
-$cfg_disable = true;
-$use_rwx = false;  # Changed default to false for better OpSec
+$block_dll = "true";
+$cfg_disable = "true";
+$use_rwx = "false";  # Changed default to false for better OpSec
 $exec = "Hijack RIP Callback";
 
 # ================================================================

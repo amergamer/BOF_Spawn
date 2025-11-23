@@ -4,7 +4,7 @@ CCX64	=	x86_64-w64-mingw32-gcc
 LDX64	= 	x86_64-w64-mingw32-ld
 
 
-CFLAGS	=	-w -Os -s -m64 -masm=intel
+CFLAGS	=	-w -Os -s -m64 -masm=intel -Wno-int-conversion -Wno-incompatible-pointer-types
 TEMP_PATH	= Bin/temp
 
 spawn_bof:

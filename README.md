@@ -1,5 +1,12 @@
 # BOF Spawn - Process Injection 
 
+## Update
+
+### 11/23/25
+
+- Update `Makefile` and add `.gitkeep` in `Bin/` and `Bin/temp`, thanks @0xTriboulet for issues
+- Update `BOF_spawn.cna` to fix initialization, thanks @D1sAbl4 for issues
+
 ## Overview
 
 **BOF Spawn** is a Beacon Object File for Cobalt Strike that implements process spawning and shellcode injection Draugr stack spoofing with indirect syscalls. This tool combines multiple evasion techniques to bypass userland hooks, call stack analysis, and memory scanners.
@@ -180,12 +187,17 @@ beacon> spawn_shellcode /path/to/payload.bin
 
 ## Compilation
 
-Requires GCC 13 (mingw-w64). Use provided Dockerfile:
+With Dockerfile:
 
 ```bash
-docker build -t ubuntu-gcc-13 .
+sudo docker build -t ubuntu-gcc-13 .
 sudo docker run --rm -it -v "$PWD":/work -w /work ubuntu-gcc-13:latest make
  ```
+
+Or, if you have nasm, make, and mingw-w64 (compatible with gcc-14) on your system
+```
+make
+```
 
 Output: `Bin/bof.o`
 
